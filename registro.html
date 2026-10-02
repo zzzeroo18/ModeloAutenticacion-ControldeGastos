@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGG - Registro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button id="theme-toggle" aria-label="Cambiar tema">Modo Claro/Oscuro</button>
+    </header>
+    <main class="card">
+        <h1>Crear Cuenta</h1>
+        <form id="reg-form">
+            <div class="form-group">
+                <label for="nombre">Nombre/s:</label>
+                <input type="text" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido/s:</label>
+                <input type="text" id="apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="nacimiento" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-email">Email:</label>
+                <input type="email" id="reg-email" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-password">Contraseña:</label>
+                <div class="password-wrapper">
+                    <input type="password" id="reg-password" required>
+                    <button type="button" class="toggle-password" data-target="reg-password" aria-label="Ver u ocultar contraseña">🔒</button>
+                </div>
+                <ul class="req-list">
+                    <li id="r-len"> Mínimo 8 caracteres</li>
+                    <li id="r-may"> Al menos 1 Mayúscula</li>
+                    <li id="r-min"> Al menos 1 Minúscula</li>
+                    <li id="r-num"> Al menos 1 Número</li>
+                    <li id="r-spe"> Al menos 1 Carácter especial</li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Repetir Contraseña:</label>
+                <div class="password-wrapper">
+                    <input type="password" id="confirm-password" required>
+                    <button type="button" class="toggle-password" data-target="confirm-password" aria-label="Ver u ocultar contraseña">🔒</button>
+                </div>
+            </div>
+            <button type="submit" id="btn-reg" disabled>Registrarse</button>
+        </form>
+        <div id="reg-msg" role="alert"></div>
+        <div class="links">
+            <a href="index.html">¿Ya tenés cuenta? Iniciar Sesión</a>
+        </div>
+    </main>
+    <script src="main.js"></script>
+    <script src="registro.js"></script>
+</body>
+</html>
